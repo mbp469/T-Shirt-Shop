@@ -1,3 +1,22 @@
+
+
+/*
+clearfix
+*/
+
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+	}
+
+/*
+outer content
+*/
+
 * {
   list-style: none;
   box-sizing: border-box;
@@ -14,6 +33,10 @@
   position: relative;
 }
 
+/*
+top half with big shirt and icon on upper right
+*/
+
 .fa-undo {
   position: absolute;
   top: 0;
@@ -28,24 +51,33 @@
   padding: 5%;
 }
 
+/*
+top pic and also the icon strip below
+*/
+
 .shirt-with-boxes {
   position: relative;
   margin: 0;
   padding: 0;
-  border: 1px solid black;
+  border: 1px solid lightblue;
   overflow: visible;
 }
 
+/*
+bottom strip of small icons
+*/
+
 .tiny-box {
   float: left;
-  width:20%;
-  line-height: 1.5rem;
+  width: 20%;
+  line-height: 4rem;
   border: 1px solid lightblue;
 }
 
 .tiny-box .fa {
-  padding-left: 35%;
-  font-size: 0.7rem;
+  padding-left: 24px;
+  padding-top: 25px;
+  font-size: 1.5rem;
 }
 
 .bottom-icon-strip {
@@ -56,28 +88,13 @@
   padding: 0;
 }
 
-h2 {
-  padding-top: 15%;
-}
-
-/*
-color tranformations
-*/
-
-.tiny-box:hover,
-.fa-undo:hover {
-  background: lightblue;
-  color: white;
-}
-
-.tiny-box:hover .fa {
-  background: lightblue;
-  color: white;
-}
-
 /*
 description and price
 */
+
+h2 {
+  padding-top: 15%;
+}
 
 .price,
 .description {
@@ -99,9 +116,26 @@ description and price
 }
 
 /*
+color tranformations
+*/
+
+.tiny-box:hover,
+.fa-undo:hover {
+  background: lightblue;
+  color: white;
+}
+
+.tiny-box:hover .fa {
+  background: lightblue;
+  color: white;
+}
+
+
+
+/*
 Size pop-up
 */
-.triangle {
+.size-container .triangle {
   width: 0;
   height: 0;
   border-left: 5px solid transparent;
@@ -114,11 +148,11 @@ Size pop-up
 
 .size-container {
   position: absolute;
-  z-index: 2;
-  top: -344%;
-  right: 40%;
+  z-index: 8;
+  top: -443%;
+  right: 36%;
   background: white;
-  opacity: .2;
+  opacity: 0;
 }
 
 .size-container ul {
@@ -131,10 +165,56 @@ Size pop-up
 }
 
 /*
-size pop-up tranformation
+color-popup
 */
 
-.xl:hover ~ .size-container {
+.color-container .triangle {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid green;
+  position: absolute;
+  left: 31%;
+  bottom: -7%;
+}
+
+.color-container {
+  position: absolute;
+  z-index: 8;
+  top: -48px;
+  right: 35px;
+  background: #ef1616;
+  opacity: 0;
+  transition: opacity 0.5s ease
+  width: 21%;
+  overflow: visible;
+}
+
+.fa-square {
+  margin: auto;
+  padding: 0;
+  margin: 0;
+}
+
+.color-container ul {
+  padding: 0;
+}
+
+.color-container ul li {
+  padding: 0;
+  line-height: 1rem;
+  display: inline;
+}
+/*
+pop-up tranformations
+*/
+
+.xl:hover .size-container {
+  opacity: 1;
+}
+
+.color:hover .color-container {
   opacity: 1;
 }
 
