@@ -4,30 +4,47 @@
 
 <head>
   <title>T-Shirt Shop</title>
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
   <link rel="stylesheet" href="styles/main.css">
-  <link rel="stylesheet" hred="styles/t-shirts.css">
+  <link rel="stylesheet" href="styles/t-shirts.css">
+
 </head>
 
   <body>
-
+    <div class="container">
     <ul class="all-items">
-
+<!-- First T-shirt -->
       <li class="item-block">
-        <img class="flip-arrow" src="#">
-        <img class="big-shirt" src="images/shirts/blue-front.png">
-        <ul class="bottom-icon-strip">
-          <li> Arrows </li>
-          <li> Heart </li>
-          <li> XL </li>
-          <li> Square </li>
-          <li> Cart </li>
-        </ul>
-        <footer>
-          <h2 class="description">Save my trees</h2>
-          <h2 class="price">29</h2>
-        </footer>
-      </li>
+        <div class="shirt-with-boxes">
+          <img class="big-shirt" src="images/shirts/blue-front.png">
+          <i class="fa fa-undo"></i>
 
+
+              <ul class="bottom-icon-strip">
+                <li><div class="tiny-box"><i class="fa fa-exchange"></i></div></li>
+                <li><div class="tiny-box"><i class="fa fa-heart-o"></i></div></li>
+                <li><div class="tiny-box xl"><i class="fa">XL</i></div>
+                    <div class="size-container">
+                      <ul>
+                        <li><span class="icon-t-shirt"></span>XL </li>
+                        <li><span class="icon-t-shirt"></span>L</li>
+                        <li><span class="icon-t-shirt"></span>M</li>
+                        <li><span class="icon-t-shirt"></span>S</li>
+                        <li class="triangle"></li>
+                      </ul>
+                    </div>
+                  </li>
+                <li><div class="tiny-box"><i class="fa fa-square"></i></div></li>
+                <li><div class="tiny-box"><i class="fa fa-shopping-cart"></i></div></li>
+
+              </ul>
+
+
+        </div>
+            <h2 class="description">Save my trees</h2>
+            <h2 class="price">29</h2>
+      </li>
+<!-- Second T-shirt -->
       <li class="item-block">
         <img class="flip-arrow" src="#">
         <img class="big-shirt" src="images/shirts/pink-front.png">
@@ -43,7 +60,7 @@
           <h2 class="price">19</h2>
         </footer>
       </li>
-
+<!-- Third T-shirt -->
       <li class="item-block">
         <img class="flip-arrow" src="#">
         <img class="big-shirt" src="images/shirts/yellow-front.png">
@@ -59,9 +76,8 @@
           <h2 class="price">39</h2>
         </footer>
       </li>
-
-
     </ul>
+  </div>
   </body>
 
 

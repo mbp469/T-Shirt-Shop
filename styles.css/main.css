@@ -1,0 +1,13 @@
+.all-items {
+  list-style: none;
+  width: 100%;
+  margin: 0 auto;
+  background: red;
+}
+
+.item-block {
+  float: left;
+  margin: 0;
+  width: 200px;
+  background: black;
+}
