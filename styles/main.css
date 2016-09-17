@@ -183,11 +183,12 @@ Size pop-up
 .size-container {
   position: absolute;
   z-index: 8;
-  top: -443%;
-  right: 36%;
+  top: -266%;
+  right: 38.5%;
   background: white;
-  opacity: .5;
+  opacity: 0;
   transition: opacity 0.5s ease;
+  width: 76px;
 }
 
 .size-container ul {
@@ -196,14 +197,63 @@ Size pop-up
 }
 
 .size-container ul li {
-  padding: 2%;
+  line-height: 2.5rem;
 }
 
 .size-container .triangle {
   position: absolute;
-  top: 0px;
-  left: 0px;
+  top: 179px;
+  left: 30px;
+  color: white;
+  font-size: 1.5rem;
+}
 
+.xl-shirt {
+  position: relative;
+  font-size: 3rem;
+}
+
+.size-on-xl {
+  position: absolute;
+  font-size: 1rem;
+  top: 11px;
+  left: 24px;
+}
+.l-shirt {
+  position: relative;
+  font-size: 2.5rem;
+  padding-left: 5px;
+}
+
+.size-on-l {
+  position: absolute;
+  font-size: 0.9rem;
+  top: 6px;
+  left: 29px;
+}
+.m-shirt {
+  position: relative;
+  font-size: 2rem;
+  padding: 10px;
+}
+
+.size-on-m {
+  position: absolute;
+  font-size: 0.7rem;
+  top: 11px;
+  left: 28px;
+}
+.s-shirt {
+  position: relative;
+  font-size: 1.6rem;
+  padding: 23%;
+}
+
+.size-on-s {
+  position: absolute;
+  font-size: .7rem;
+  top: 12px;
+  left: 28.5px;
 }
 
 /*
@@ -230,7 +280,7 @@ color-popup
   height: 71px;
   width: 72px;
   background: white;
-  opacity: .5;
+  opacity: 0;
   transition: opacity 0.5s ease;
 }
 
