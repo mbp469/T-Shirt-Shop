@@ -42,13 +42,38 @@ top half with big shirt and icon on upper right
   right: 0;
   border: 1px solid lightblue;
   padding: 1%;
+  z-index: 2;
 }
 
 .big-shirt {
   width: 100%;
   position: relative;
   padding: 5%;
-  transition: visibilty 1s ease;
+  opacity: 1;
+
+  /*-webkit-animation-name: turn-shirt;
+  -webkit-animation-duration: 4s;*/
+  /*animation-name: turn-shirt;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;*/
+  transition: opacity 1s ease;
+}
+
+.back-of-shirt {
+  width: 100%;
+  position: absolute;
+  padding: 5%;
+  opacity: 0;
+  transition: opacity 1s ease;
+  transition-delay: 1s;
+  /*animation-name: turn-shirt-back;
+  animation-duration: 4s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;*/
+  top: 3px;
+  right: 2px;
 }
 
 /*
@@ -130,12 +155,21 @@ color tranformations
   color: white;
 }
 
+/*
+triangles
+*/
+
+.triangle {
+  color: white;
+  background: translucent;
+}
+
 
 
 /*
 Size pop-up
 */
-.size-container .triangle {
+/*.size-container .triangle {
   width: 0;
   height: 0;
   border-left: 5px solid transparent;
@@ -144,7 +178,7 @@ Size pop-up
   position: absolute;
   left: 31%;
   bottom: -7%;
-}
+}*/
 
 .size-container {
   position: absolute;
@@ -165,11 +199,18 @@ Size pop-up
   padding: 2%;
 }
 
+.size-container .triangle {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+
+}
+
 /*
 color-popup
 */
 
-.color-container .triangle {
+/*.color-container .triangle {
   width: 0;
   height: 0;
   border-left: 5px solid transparent;
@@ -178,34 +219,57 @@ color-popup
   position: absolute;
   left: 31%;
   bottom: -7%;
-}
+}*/
 
 .color-container {
+  border: 2px solid lightblue;
   position: absolute;
   z-index: 8;
   top: -70px;
-  right: 63px;
-  height: 70px;
-  width: 70px;
-  background: #ab8585;
+  right: 62px;
+  height: 71px;
+  width: 72px;
+  background: white;
   opacity: .5;
   transition: opacity 0.5s ease;
-  overflow: visible;
 }
 
-.color-container ul {
-  padding: 0;
+.color-container span {
+  line-height: 0;
+  display: inline-block;
+  position: absolute;
+  font-size: 24px;
+  float: left;
 }
 
-.color-container ul li {
-  padding: 0;
-  line-height: 1rem;
-  display: inline;
+.blue {
+  top: 19px;
+  left: 9px;
+  color: #81bce5;
 }
-
+.pink {
+  top: 19px;
+  left: 37px;
+  color: #d583ac;
+}
 .yellow {
-  padding:0;
+  top: 50px;
+  left: 9px;
+  color: #deb17e;
 }
+.green {
+  top: 50px;
+  left: 37px;
+  color: #8bb992;
+}
+
+.color-container .triangle {
+  position: absolute;
+  top: 67px;
+  left: 27px;
+  line-height: 2px;
+}
+
 
 /*
 pop-up tranformations
@@ -213,19 +277,44 @@ pop-up tranformations
 
 .xl:hover .size-container {
   opacity: 1;
+  border-bottom: none;
+}
+
+.xl:hover {
+  border-top: none;
 }
 
 .color:hover .color-container {
   opacity: 1;
+  border-bottom: none;
+}
+
+.color:hover {
+  border-top: none;
 }
 
 /*
 spinning shirt around
 */
 
-.fa-undo:hover ~ .big-shirt{
-  transform: rotate(180deg);
-  visibility: hidden;
+/*@keyframes turn-shirt {
+  from {opacity: 1;}
+  to {opacity: 0;}
+}
+
+@keyframes turn-shirt-back {
+  from {opacity: 0}
+  to {opacity: 1}
+}*/
+
+.fa-undo:hover + .big-shirt{
+  transform: rotateY(90deg);
+  /*opacity: 0;*/
+}
+
+.fa-undo:hover ~ .back-of-shirt {
+  transform: rotateY(90deg);
+  /*opacity: 1;*/
 }
 
 /*
