@@ -4,14 +4,14 @@
 clearfix
 */
 
-.clearfix:after {
+/*.clearfix:after {
 	visibility: hidden;
 	display: block;
 	font-size: 0;
 	content: " ";
 	clear: both;
 	height: 0;
-	}
+	}*/
 
 /*
 outer content
@@ -27,9 +27,8 @@ outer content
 
 .item-block {
   float: left;
-  margin: 0;
-  width: 30%;
-  margin: 1%;
+  width: 27%;
+  margin: 3%;
   position: relative;
 }
 
@@ -49,6 +48,7 @@ top half with big shirt and icon on upper right
   width: 100%;
   position: relative;
   padding: 5%;
+  transition: visibilty 1s ease;
 }
 
 /*
@@ -94,6 +94,8 @@ description and price
 
 h2 {
   padding-top: 15%;
+  padding-top: 28%;
+  font-size: 1.3rem;
 }
 
 .price,
@@ -103,12 +105,10 @@ h2 {
 
 .description {
   float: left;
-  font-size: 1rem;
 }
 
 .price {
   float: right;
-  font-size: 1rem;
 }
 
 .price:before {
@@ -152,7 +152,8 @@ Size pop-up
   top: -443%;
   right: 36%;
   background: white;
-  opacity: 0;
+  opacity: .5;
+  transition: opacity 0.5s ease;
 }
 
 .size-container ul {
@@ -182,19 +183,14 @@ color-popup
 .color-container {
   position: absolute;
   z-index: 8;
-  top: -48px;
-  right: 35px;
-  background: #ef1616;
-  opacity: 0;
-  transition: opacity 0.5s ease
-  width: 21%;
+  top: -70px;
+  right: 63px;
+  height: 70px;
+  width: 70px;
+  background: #ab8585;
+  opacity: .5;
+  transition: opacity 0.5s ease;
   overflow: visible;
-}
-
-.fa-square {
-  margin: auto;
-  padding: 0;
-  margin: 0;
 }
 
 .color-container ul {
@@ -206,6 +202,11 @@ color-popup
   line-height: 1rem;
   display: inline;
 }
+
+.yellow {
+  padding:0;
+}
+
 /*
 pop-up tranformations
 */
@@ -216,6 +217,15 @@ pop-up tranformations
 
 .color:hover .color-container {
   opacity: 1;
+}
+
+/*
+spinning shirt around
+*/
+
+.fa-undo:hover ~ .big-shirt{
+  transform: rotate(180deg);
+  visibility: hidden;
 }
 
 /*
