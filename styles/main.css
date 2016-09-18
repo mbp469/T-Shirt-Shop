@@ -40,40 +40,53 @@ top half with big shirt and icon on upper right
   position: absolute;
   top: 0;
   right: 0;
-  border: 1px solid lightblue;
+  border-bottom: 2px solid lightblue;
   padding: 1%;
   z-index: 2;
+  border-left: 2px solid lightblue;
+}
+
+.shirt-container {
+  position: relative;
+  perspective: 1000px;
 }
 
 .big-shirt {
+  position: absolute;
   width: 100%;
-  position: relative;
   padding: 5%;
   opacity: 1;
-
-  /*-webkit-animation-name: turn-shirt;
-  -webkit-animation-duration: 4s;*/
-  /*animation-name: turn-shirt;
-  animation-duration: 4s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;*/
-  transition: opacity 1s ease;
+  z-index: 2;
+  transform: rotateY(0deg);
 }
 
 .back-of-shirt {
-  width: 100%;
   position: absolute;
-  padding: 5%;
   opacity: 0;
-  transition: opacity 1s ease;
-  transition-delay: 1s;
-  /*animation-name: turn-shirt-back;
-  animation-duration: 4s;
-  animation-delay: 2s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;*/
   top: 3px;
   right: 2px;
+  transform: rotateY(180deg);
+}
+
+/*
+spinning shirt around
+*/
+
+.flip {
+  transition: 1s;
+  transform-style: preserve-3d;
+  position:relative;
+}
+
+.fa-undo:hover .flip, .shirt-container.hover .flip {
+  transform: rotateY(180deg);
+}
+
+.big-shirt,
+.back-of-shirt {
+  backface-visibility: hidden;
+  width: 100%;
+  padding: 5%;
 }
 
 /*
@@ -84,8 +97,9 @@ top pic and also the icon strip below
   position: relative;
   margin: 0;
   padding: 0;
-  border: 1px solid lightblue;
-  overflow: visible;
+  border: 2px solid lightblue;
+  width: 330px;
+  height: 403px;
 }
 
 /*
@@ -96,11 +110,11 @@ bottom strip of small icons
   float: left;
   width: 20%;
   line-height: 4rem;
-  border: 1px solid lightblue;
+  border-left: 2px solid lightblue;
 }
 
 .tiny-box .fa {
-  padding-left: 24px;
+  padding-left: 22px;
   padding-top: 25px;
   font-size: 1.5rem;
 }
@@ -108,9 +122,12 @@ bottom strip of small icons
 .bottom-icon-strip {
   float: left;
   position: absolute;
-  width: 100%;
+  width: 328px;
   margin: 0;
   padding: 0;
+  top: 324px;
+  left: -2px;
+  border-top: 2px solid lightblue;
 }
 
 /*
@@ -130,10 +147,17 @@ h2 {
 
 .description {
   float: left;
+  display: block;
+  position: absolute;
+  top: 321px;
 }
 
 .price {
   float: right;
+  display: inline-block;
+  position: absolute;
+  top: 321px;
+  right: 5px;
 }
 
 .price:before {
@@ -260,17 +284,6 @@ Size pop-up
 color-popup
 */
 
-/*.color-container .triangle {
-  width: 0;
-  height: 0;
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  border-top: 5px solid green;
-  position: absolute;
-  left: 31%;
-  bottom: -7%;
-}*/
-
 .color-container {
   border: 2px solid lightblue;
   position: absolute;
@@ -341,30 +354,6 @@ pop-up tranformations
 
 .color:hover {
   border-top: none;
-}
-
-/*
-spinning shirt around
-*/
-
-/*@keyframes turn-shirt {
-  from {opacity: 1;}
-  to {opacity: 0;}
-}
-
-@keyframes turn-shirt-back {
-  from {opacity: 0}
-  to {opacity: 1}
-}*/
-
-.fa-undo:hover + .big-shirt{
-  transform: rotateY(90deg);
-  /*opacity: 0;*/
-}
-
-.fa-undo:hover ~ .back-of-shirt {
-  transform: rotateY(90deg);
-  /*opacity: 1;*/
 }
 
 /*
