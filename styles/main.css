@@ -49,44 +49,67 @@ top half with big shirt and icon on upper right
 .shirt-container {
   position: relative;
   perspective: 1000px;
+  width: 326px;
+  height: 324px;
+}
+
+.big-shirt,
+.back-of-shirt {
+  width: 313px;
+  padding: 5%;
+  height: 290px;
+  top: 14px;
+  left: 14px;
+  backface-visibility: hidden;
 }
 
 .big-shirt {
   position: absolute;
-  width: 100%;
-  padding: 5%;
   opacity: 1;
   z-index: 2;
+  background: url(../images/shirts/blue-front.png) no-repeat;
+  background-size: contain;
   transform: rotateY(0deg);
 }
 
 .back-of-shirt {
   position: absolute;
-  opacity: 0;
-  top: 3px;
-  right: 2px;
+  opacity: 1;
+  top: 12px;
+  background: url(file:///Users/marianpowell/Documents/T-Shirt%20Shop/images/shirts/blue-back.png) no-repeat;
+  background-size: contain;
   transform: rotateY(180deg);
+}
+
+.flip {
+  backface-visibility: hidden;
+  transition-duration: 1s;
+  transform-style: preserve-3d;
+  transform-origin: 52%;
+  position:relative;
+  width: 326px;
+  height: 325px;
+
 }
 
 /*
 spinning shirt around
 */
 
-.flip {
-  transition: 1s;
-  transform-style: preserve-3d;
-  position:relative;
+  .fa-undo:hover ~ .shirt-container .flip {
+    animation: flip-shirt 2s infinite ease-in-out;
 }
 
-.fa-undo:hover .flip, .shirt-container.hover .flip {
-  transform: rotateY(180deg);
-}
-
-.big-shirt,
-.back-of-shirt {
-  backface-visibility: hidden;
-  width: 100%;
-  padding: 5%;
+@keyframes flip-shirt {
+    0% {
+      transform: rotateY(180deg);
+    }
+    50% {
+      transform: rotateY(0deg);
+    }
+    100% {
+      transform: rotateY(180deg);
+    }
 }
 
 /*
