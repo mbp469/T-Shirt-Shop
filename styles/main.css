@@ -158,13 +158,25 @@ bottom strip of small icons
   background: tranparent;
   opacity: 0;
   position: absolute;
-  color: black;
   z-index: 3;
   font-size: 64px;
   font-style: normal;
   top: 3px;
   right: 80px;
   transition: opacity .2s linear;
+}
+
+.empty-square-blue {
+  color: white;
+  background: lightblue;
+}
+.empty-square-pink {
+  color: white;
+  background: pink;
+}
+.empty-square-yellow {
+  color: white;
+  background: yellow;
 }
 
 .tiny-box {
@@ -242,6 +254,11 @@ color tranformations on hover
 .tiny-box:hover .fa{
   background: lightblue;
   color: white;
+}
+
+.color:hover .empty-square {
+  opacity: 1;
+  z-index: 5;
 }
 
 /*
