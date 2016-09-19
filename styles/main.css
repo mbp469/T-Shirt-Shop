@@ -10,7 +10,7 @@ outer content
   box-sizing: border-box;
   font-family: sans-serif;
   font-weight: normal;
-  color: lightblue;
+  color: #81bce5;
 }
 
 .item-block {
@@ -28,10 +28,10 @@ top half with big shirt and icon on upper right
   position: absolute;
   top: 0;
   right: 0;
-  border-bottom: 2px solid lightblue;
+  border-bottom: 2px solid #81bce5;
   padding: 1%;
   z-index: 2;
-  border-left: 2px solid lightblue;
+  border-left: 2px solid #81bce5;
 }
 
 .shirt-container {
@@ -145,7 +145,7 @@ big shirt along with the icon strip below
   position: relative;
   margin: 0;
   padding: 0;
-  border: 2px solid lightblue;
+  border: 2px solid #81bce5;
   width: 330px;
   height: 403px;
 }
@@ -171,7 +171,7 @@ bottom strip of small icons
 
 .empty-square-blue {
   border: 3px solid  white;
-  background: lightblue;
+  background: #81bce5;
 }
 .empty-square-pink {
   border: 3px solid  white;
@@ -186,7 +186,7 @@ bottom strip of small icons
   float: left;
   width: 20%;
   line-height: 4rem;
-  border-left: 2px solid lightblue;
+  border-left: 2px solid #81bce5;
 }
 
 .tiny-box .fa {
@@ -208,7 +208,7 @@ bottom strip of small icons
   padding: 0;
   top: 324px;
   left: -2px;
-  border-top: 2px solid lightblue;
+  border-top: 2px solid #81bce5;
 }
 
 /*
@@ -255,7 +255,7 @@ color tranformations on hover
 .tiny-box:hover,
 .fa-undo:hover,
 .tiny-box:hover .fa{
-  background: lightblue;
+  background: #81bce5;
   color: white;
 }
 
@@ -293,7 +293,7 @@ Size pop-up
 }
 
 .size-container ul {
-  border: 2px solid lightblue;
+  border: 2px solid #81bce5;
   padding: 2%;
 }
 
@@ -363,7 +363,7 @@ color-popup
 */
 
 .color-container {
-  border: 2px solid lightblue;
+  border: 2px solid #81bce5;
   position: absolute;
   z-index: 8;
   right: 62.1px;
