@@ -86,17 +86,17 @@ the big shirt itself
 }
 
 .back-of-shirt-blue {
-  background: url(file:///Users/marianpowell/Documents/T-Shirt%20Shop/images/shirts/blue-back.png) no-repeat;
+  background: url(../images/shirts/blue-back.png) no-repeat;
   background-size: contain;
 }
 
 .back-of-shirt-pink {
-  background: url(file:///Users/marianpowell/Documents/T-Shirt%20Shop/images/shirts/pink-back.png) no-repeat;
+  background: url(../images/shirts/pink-back.png) no-repeat;
   background-size: contain;
 }
 
 .back-of-shirt-yellow {
-  background: url(file:///Users/marianpowell/Documents/T-Shirt%20Shop/images/shirts/yellow-back.png) no-repeat;
+  background: url(../images/shirts/yellow-back.png) no-repeat;
   background-size: contain;
 }
 
@@ -215,7 +215,8 @@ h2 {
   float: left;
   display: block;
   position: absolute;
-  top: 321px;
+  margin-top: 23px;
+  padding: 0px;
 }
 
 .price {
@@ -223,7 +224,9 @@ h2 {
   display: inline-block;
   position: absolute;
   top: 321px;
-  right: 5px;
+  padding: 0px;
+  right: 1px;
+  margin-top: 101px;
 }
 
 .price:before {
@@ -234,14 +237,9 @@ h2 {
 color tranformations
 */
 
-.fa-undo:hover {
-  background: lightblue;
-  color: white;
-}
-
-.tiny-box:hover .fa,
 .tiny-box:hover,
-.tiny-box.fa:hover {
+.fa-undo:hover,
+.tiny-box:hover .fa{
   background: lightblue;
   color: white;
 }
