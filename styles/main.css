@@ -86,16 +86,16 @@ the big shirt itself
 }
 
 .back-of-shirt-blue {
-    background: url(https://mbp469.github.io/T-Shirt-Shop/images/shirts/blue-back.png) no-repeat;
+    background: url(../images/shirts/blue-back.png) no-repeat;
     background-size: contain;
 }
 
-.back-of-shirt-pink {url(https://mbp469.github.io/T-Shirt%20Shop/images/shirts/pink-back.png) no-repeat;
+.back-of-shirt-pink {url(../images/shirts/pink-back.png) no-repeat;
   background-size: contain;
 }
 
 .back-of-shirt-yellow {
-  background: url(https://mbp469.github.io/T-Shirt%20Shop/images/shirts/yellow-back.png) no-repeat;
+  background: url(../images/shirts/yellow-back.png) no-repeat;
   background-size: contain;
 }
 
